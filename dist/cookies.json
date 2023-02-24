@@ -1,0 +1,44 @@
+[
+  {
+    "ID": "1",
+    "Item": "Chocolate chip",
+    "ImageLocation": "./assets/images/chocolate-chip.jpg",
+    "Description": "These crunchy classics are our favorites!",
+    "Price per dozen": "$6.00"
+  },
+  {
+    "ID": "2",
+    "Item": "Snickerdoodle",
+    "ImageLocation": "./assets/images/snickerdoodle.jpg",
+    "Description": "Crispy edges...chewy centers...just the right amount of sugar and cinnamon",
+    "Price per dozen": "$7.00"
+  },
+  {
+    "ID": "3",
+    "Item": "Peanut butter",
+    "ImageLocation": "./assets/images/peanut-butter.jpg",
+    "Description": "There's nothing like a peanut butter cookie to satisfy your sweet tooth and lift your spirits.",
+    "Price per dozen": "$6.00"
+  },
+  {
+    "ID": "4",
+    "Item": "Oatmeal raisin",
+    "ImageLocation": "./assets/images/oatmeal-raisin.jpg",
+    "Description": "My grandmother's recipe. There's nothing better.",
+    "Price per dozen": "$7.50"
+  },
+  {
+    "ID": "5",
+    "Item": "Sugar",
+    "ImageLocation": "./assets/images/sugar.jpg",
+    "Description": "Soft, light, delicate, and full of flavor.",
+    "Price per dozen": "$6.00"
+  },
+  {
+    "ID": "6",
+    "Item": "Gingerbread",
+    "ImageLocation": "./assets/images/gingerbread.jpg",
+    "Description": "Molasses, ginger, and spice make everything nice.",
+    "Price per dozen": "$8.00"
+  }
+]

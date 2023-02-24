@@ -1,0 +1,30 @@
+[
+  {
+    "MenuID": "1",
+    "Title": "Home",
+    "For": "tab1",
+    "icon-main": "fa-solid",
+    "icon-sub": "fa-house"
+  },
+  {
+    "MenuID": "2",
+    "Title": "Cookies",
+    "For": "tab2",
+    "icon-main": "fa-solid",
+    "icon-sub": "fa-cookie-bite"
+  },
+  {
+    "MenuID": "3",
+    "Title": "Cakes",
+    "For": "tab3",
+    "icon": "fa-solid",
+    "icon-sub": "fa-cake-candles"
+  },
+  {
+    "MenuID": "4",
+    "Title": "Contact",
+    "For": "tab4",
+    "icon": "fa-regular",
+    "icon-sub": "fa-comments"
+  }
+]

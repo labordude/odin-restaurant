@@ -2,12 +2,13 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: { index: "./src/index.js" },
   devServer: {
     static: "./dist",
     hot: true,
   },
+  devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
       title: "Crumby Daze",
@@ -15,7 +16,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: "[name].main.js",
+    filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {
@@ -33,5 +34,10 @@ module.exports = {
         type: "asset/resource",
       },
     ],
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
   },
 };
