@@ -28,15 +28,17 @@ function cookieMonster() {
     image.classList.add("image-cookie");
     image.src = `${cookie.ImageLocation}`;
     let desc = document.createElement("p");
+    desc.classList.add("description-text");
     desc.textContent = cookie.Description;
     let price = document.createElement("p");
+    price.classList.add("price-text");
     price.textContent = cookie["Price per dozen"];
     textBox.appendChild(h2);
     textBox.appendChild(image);
     textBox.appendChild(desc);
     textBox.appendChild(price);
     itemCard.appendChild(textBox);
-    itemCard.appendChild(items);
+    items.appendChild(itemCard);
   });
   content.appendChild(items);
 }

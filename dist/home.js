@@ -1,13 +1,18 @@
 import menu from "./tabmenu.json";
 import comments from "./comments.json";
+
+function makeDiv(className) {
+  let div = document.createElement("div");
+  div.classList.add(className);
+  return div;
+}
 function createLogo() {
-  const logo = document.createElement("div").classList.add("logo");
-  const imageHolder = document
-    .createElement("div")
-    .classList.add("image-holder");
-  const logoImage = document.createElement("img").classList.add("logo-img");
+  const logo = makeDiv("logo");
+  const imageHolder = makeDiv("image-holder");
+  const logoImage = document.createElement("img");
+  logoImage.classList.add("logo-image");
   logoImage.src = "./assets/logo.png";
-  const logoText = document.createElement("div").classList.add("logo-text");
+  const logoText = makeDiv("logo-text");
   logoText.textContent = "Crumby Daze Cookies";
 
   // add logo image to div
@@ -18,10 +23,13 @@ function createLogo() {
   return logo;
 }
 function createTabs() {
-  createLogo();
-  const tabs = document.createElement("div").classList.add("tabs");
-  tabs.appendChild(logo);
-  for (i = 1; i <= 4; i++) {
+  const container = document.getElementById("container");
+  console.log(container);
+  const tabs = makeDiv("tabs");
+  container.append(tabs);
+  tabs.id = "tabs";
+  tabs.appendChild(createLogo());
+  for (let i = 1; i <= 4; i++) {
     let input = document.createElement("input");
     input.type = "radio";
     input.id = `tab${i}`;
@@ -35,10 +43,13 @@ function createTabs() {
   menu.forEach((item) => {
     const li = document.createElement("li");
     li.title = `${item.Title}`;
-    const label = document.createElement("label");
-    label.for = `${item.For}`;
+    let label = document.createElement("label");
+    label.htmlFor = `${item.For}`;
+
     label.role = "button";
-    const icon = document.createElement("i").classList.add(`${item.icon}`);
+    const icon = document.createElement("i");
+    icon.classList.add(`${item["icon-main"]}`);
+    icon.classList.add(`${item["icon-sub"]}`);
     const br = document.createElement("br");
     const span = document.createElement("span");
     span.textContent = `${item.Title}`;
@@ -50,27 +61,42 @@ function createTabs() {
   });
   tabs.appendChild(ul);
 
-  const slider = document.createElement("div").classList.add("slider");
-  const indicator = document.createElement("div").classList.add("indicator");
+  const slider = makeDiv("slider");
+  const indicator = makeDiv("indicator");
+
   slider.appendChild(indicator);
   tabs.appendChild(slider);
 
-  const content = document.createElement("div").classList.add("content");
+  const content = makeDiv("content");
+  content.id = "content";
   tabs.appendChild(content);
+
+  // // document.getElementById("content").textContent = "hello";
+  // const section = document.createElement("section");
+  // tabs.appendChild(section);
+  // comments.forEach((comment) => {
+  //   let para = document.createElement("p");
+  //   para.textContent = `${comment.Review}`;
+  //   section.appendChild(para);
+  // });
 }
 function createHome() {
-  document.getElementsByClassName("content").textContent = "";
+  const content = document.getElementById("content");
+  content.textContent = "";
   const section = document.createElement("section");
+  content.appendChild(section);
   comments.forEach((comment) => {
     let para = document.createElement("p");
     para.textContent = `${comment.Review}`;
     section.appendChild(para);
   });
 }
+
 function createLayout() {
-  const container = document.getElementsByClassName("container");
   createTabs();
   createHome();
+
+  // createHome();
 }
 
-export default createLayout;
+export { createLayout, makeDiv, createHome };

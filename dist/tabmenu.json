@@ -17,14 +17,14 @@
     "MenuID": "3",
     "Title": "Cakes",
     "For": "tab3",
-    "icon": "fa-solid",
+    "icon-main": "fa-solid",
     "icon-sub": "fa-cake-candles"
   },
   {
     "MenuID": "4",
     "Title": "Contact",
     "For": "tab4",
-    "icon": "fa-regular",
+    "icon-main": "fa-regular",
     "icon-sub": "fa-comments"
   }
 ]
