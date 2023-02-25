@@ -1,0 +1,45 @@
+[
+  {
+    "ID": "1",
+    "Item": "Mocha Pound Cake",
+    "ImageLocation": "./assets/images/mocha-pound-cake.jpg",
+    "Description": "Coffee + chocolate = this baker's FAVORITE!",
+    "Price per cake": "$13.00"
+  },
+  {
+    "ID": "2",
+    "Item": "Maple Bourbon Banana Cake",
+    "ImageLocation": "./assets/images/maple-bourbon-banana-cake.jpg",
+    "Description": "Seriously, just try this.",
+    "Price per cake": "$18.00"
+  },
+  {
+    "ID": "3",
+    "Item": "NY Style Cheesecake",
+    "ImageLocation": "./assets/images/cheesecake.jpg",
+    "Description": "A little lemon and some sour cream give this dense, creamy cheesecake a touch of tang! Top it with cherries and eat it fast!",
+    "Price per cake": "$16.00"
+  },
+  {
+    "ID": "4",
+    "Item": "Carrot Cake",
+    "ImageLocation": "./assets/images/carrot-cake.jpg",
+    "Description": "You'll love this carrot cake. It's moist, tender, and studded with freshly grated carrot and chopped walnuts. It makes an excellent breakfast cake, and an even better dessert",
+    "Price per cake": "$15.00"
+  },
+
+  {
+    "ID": "5",
+    "Item": "Simple Chocolate Cake",
+    "ImageLocation": "./assets/images/chocolate-cake.jpg",
+    "Description": "Not your basic chocolate cake.",
+    "Price per cake": "$10.00"
+  },
+  {
+    "ID": "6",
+    "Item": "Classic Vanilla Bundt Cake",
+    "ImageLocation": "./assets/images/bundt-cake.jpg",
+    "Description": "Simplicity at its tastiest.",
+    "Price per cake": "$11.00"
+  }
+]

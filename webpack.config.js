@@ -3,7 +3,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "production",
-  entry: { index: "./src/index.js" },
+  entry: {
+    index: "./src/index.js",
+    home: "./src/home.js",
+    cookiemenu: "./src/cookiemenu.js",
+    cakemenu: "./src/cakemenu.js",
+  },
   devServer: {
     static: "./dist",
     hot: true,
@@ -11,12 +16,12 @@ module.exports = {
   devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Crumby Daze",
+      title: "Crumby Daze Cookies",
       template: "./src/index.html",
     }),
   ],
   output: {
-    filename: "main.js",
+    filename: "[name].main.js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {

@@ -91,16 +91,7 @@ function createHome() {
     section.appendChild(para);
   });
 }
-function keepInTouch() {
-  const content = document.getElementById("content");
-  content.textContent = "";
-  const section = document.createElement("section");
-  content.appendChild(section);
-  const image = document.createElement("img");
-  image.src = "./images/bakery.jpg";
 
-  section.appendChild(image);
-}
 function createLayout() {
   createTabs();
   createHome();
@@ -108,4 +99,4 @@ function createLayout() {
   // createHome();
 }
 
-export { createLayout, makeDiv, createHome, keepInTouch };
+export { createLayout, makeDiv, createHome };

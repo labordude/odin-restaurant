@@ -1,8 +1,8 @@
 import "./style.css";
-import { createLayout, createHome, keepInTouch } from "./home.js";
-import { cookieMonster } from "./cookiemenu.js";
-import { letThemEatCake } from "./cakemenu.js";
-
+import { createLayout, createHome } from "./home.js";
+import { cookieMonster } from "./menu-cookies.js";
+// import letThemEatCake from './menu-cakes.js';
+// import keepInTouch from './contact.js';
 function setEventListeners() {
   const labels = Array.from(document.querySelectorAll("label"));
   labels.forEach((label) =>

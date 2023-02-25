@@ -91,7 +91,20 @@ function createHome() {
     section.appendChild(para);
   });
 }
-
+function keepInTouch() {
+  const content = document.getElementById("content");
+  content.textContent = "";
+  const section = document.createElement("section");
+  content.appendChild(section);
+  let para = document.createElement("p");
+  const image = document.createElement("img");
+  image.src = "./assets/images/bakery.jpeg";
+  const hours = document.createElement("p");
+  hours.textContent = "Open 11am-8pm daily!";
+  para.appendChild(image);
+  section.appendChild(para);
+  section.appendChild(hours);
+}
 function createLayout() {
   createTabs();
   createHome();
@@ -99,4 +112,4 @@ function createLayout() {
   // createHome();
 }
 
-export { createLayout, makeDiv, createHome };
+export { createLayout, makeDiv, createHome, keepInTouch };
